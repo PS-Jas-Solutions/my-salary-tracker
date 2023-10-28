@@ -1,11 +1,20 @@
 <app-header></app-header>
-<mat-tab-group>
+<nav mat-tab-nav-bar>
+    <a mat-tab-link
+    *ngFor="let link of navLinks"
+    [routerLink]="link.link"
+    routerLinkActive #rla="routerLinkActive"
+    [active]="rla.isActive">
+   {{link.label}}
+  </a>
+  </nav>
+  <router-outlet></router-outlet>
+<!-- <mat-tab-group>
     <mat-tab>
         <ng-template mat-tab-label>
             <mat-icon class="example-tab-icon">thumb_up</mat-icon>
             Spending
         </ng-template>
-      <app-spending></app-spending>
     </mat-tab>
 
     <mat-tab>
@@ -13,7 +22,6 @@
             <mat-icon class="example-tab-icon">thumb_up</mat-icon>
             Transactions
         </ng-template>
-        <app-transaction></app-transaction>
       
     </mat-tab>
 
@@ -23,8 +31,6 @@
             Categories
         </ng-template>
 
-        <app-category></app-category>
-
        
     </mat-tab>
     <mat-tab>
@@ -32,8 +38,7 @@
             <mat-icon class="example-tab-icon">thumb_up</mat-icon>
             Accounts
         </ng-template>
-<app-account></app-account>
        
     </mat-tab>
-</mat-tab-group>
+</mat-tab-group> -->
 <app-footer></app-footer>
