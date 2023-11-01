@@ -1,0 +1,28 @@
+<div class="modal-wrap">
+    <h2 mat-dialog-title>Show Spending</h2>
+    <div mat-dialog-content>
+
+        <mat-radio-group aria-labelledby="show-spending-label" class="radio-group" [(ngModel)]="showSpending">
+            <!-- <ng-container *ngFor="let option in showSpendingOptions"> -->
+            <!-- <mat-radio-button *ngFor="let option in showSpendingOptions" (click)="showSpendingSelected()" class="radio-button" [value]="option.id">
+                {{option.name}}
+            </mat-radio-button> -->
+            <!-- </ng-container>         -->
+            <mat-radio-button (click)="showSpendingSelected('monthly')" class="radio-button" value="monthly">
+                Monthly
+            </mat-radio-button>
+            <mat-radio-button (click)="showSpendingSelected('yearly')" class="radio-button" value="yearly">
+                Yearly
+            </mat-radio-button>
+        </mat-radio-group>
+
+    </div>
+    <div mat-dialog-actions>
+        <div class="row">
+            <div class="col-12 d-flex align-items-center justify-content-end">
+                <button mat-button color="primary" (click)="closePopup()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+</div>

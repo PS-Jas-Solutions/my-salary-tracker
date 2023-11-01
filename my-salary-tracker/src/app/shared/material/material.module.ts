@@ -11,6 +11,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [],
@@ -24,7 +27,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatFormFieldModule,
     MatTabsModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule,
+    MatRadioModule,
+    MatRadioModule,
+    MatMenuModule,
+    MatDialogModule
   ],
   exports: [
     MatCardModule,
@@ -36,7 +44,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatFormFieldModule,
     MatTabsModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatRadioModule,
+    MatMenuModule,
+    MatDialogModule
   ]
 
 })

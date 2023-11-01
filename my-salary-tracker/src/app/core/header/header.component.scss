@@ -1,0 +1,19 @@
+header {
+    background-color: #12171C;
+    height: 4rem;
+    display: flex;
+    width: 100%;
+
+    .header-primary-btn {
+        background: #F5F6F7;
+        min-width: 6rem;
+        color: #12171C;
+    }
+    .mat-icon  {
+        color: #F5F6F7;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-left: 1rem;
+        cursor: pointer;
+    }
+}

@@ -1,4 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('@angular/material/prebuilt-themes/indigo-pink.css');
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    line-height: 1.15;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.row {
+    margin: 0;
+    width: 100%;
+}
+
+.mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-height: 1rem !important;
+    --mdc-linear-progress-track-height: 1rem !important;
+    --mdc-linear-progress-track-shape: 0;
+    border-radius: 0.5rem !important;
+
+    --mdc-linear-progress-active-indicator-color: #00a86b !important;
+    --mdc-linear-progress-track-color: #a8201a !important;
+}
+
+.mat-mdc-tab {
+    padding: 0 !important;
+
+    .mdc-tab__content {
+        width: 100% !important;
+
+        .mdc-tab__text-label {
+            width: 100% !important;
+            height: 100% !important;
+
+            .primary-tab {
+                width: 100% !important;
+                height: 100% !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                flex-direction: column !important;
+            }
+        }
+    }
+}
+
+.secondary-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    border-radius: 1.5rem;
+    padding: 0px 2rem;
+}
+
+.expense-tab {
+    border: 2px solid blue;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;       
+    color: blue;
+}
+
+.income-tab {
+    border: 2px solid blue;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; 
+    color: blue;
+}
+.mdc-tab--active .secondary-tab {
+    border: 2px solid red;
+    color: red;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+}
+
+.radio-button {
+    margin: 5px;
+    cursor: pointer;
+
+    .mdc-label {
+        cursor: pointer;
+    }
+}
+
+label {
+    margin-bottom: 0 !important;
+}
+
+.tab-wrap .mat-mdc-tab-header {
+    --mdc-secondary-navigation-tab-container-height: 4rem !important;
+}

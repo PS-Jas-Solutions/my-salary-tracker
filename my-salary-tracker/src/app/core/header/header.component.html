@@ -1,1 +1,33 @@
-<p>header works!</p>
+<header>
+    <div class="row">
+        <div class="col-6 d-flex align-items-center justify-content-start">
+            <button (click)="monthYearButtonClicked()" type="button" class="btn header-primary-btn" mat-raised-button color="primary">October</button>
+        </div>
+        <div class="col-6 d-flex align-items-center justify-content-end">
+            
+            <button mat-icon-button [matMenuTriggerFor]="accountSwitchMenu" aria-label="Account Switch Menu">
+                <mat-icon>account_balance_wallet</mat-icon>
+            </button>
+            <button mat-icon-button [matMenuTriggerFor]="headerMenu" aria-label="Header Menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+        </div>
+    </div>
+    <mat-menu #accountSwitchMenu="matMenu">
+        <ng-container *ngFor="let account of accountsList">
+            <button mat-menu-item>
+                <span>{{account.accountName}}</span>
+            </button>
+        </ng-container>
+    </mat-menu>
+    <mat-menu #headerMenu="matMenu">
+        <button mat-menu-item (click)="gotoViewProfile()">
+            <mat-icon>person_outline</mat-icon>
+            <span>View Profile</span>
+        </button>
+        <button mat-menu-item (click)="logoutProfileClicked()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Logout</span>
+        </button>
+    </mat-menu>
+</header>
